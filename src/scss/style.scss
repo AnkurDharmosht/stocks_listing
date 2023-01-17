@@ -1,0 +1,26 @@
+// @import "colors";
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+$black-color: #000000;
+$white-color: #ffffff;
+$theme-blue: #637fa4;
+$pink-color: #ff69b4;
+$light-blue: #1976d242;
+$dark-gray: #314259;
+$grey: #9092a3;
+$light-grey: #f9f9f9;
+
+* {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+// input number side btn hide
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
