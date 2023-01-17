@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MiniDrawer from "./views/components/AppSideBar";
 import Stocks from "./views/Stocks";
 import Instruments from "./views/Instruments";
 
@@ -8,11 +7,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<MiniDrawer />} /> */}
-          <Route path="/" element={<MiniDrawer />} >
-            <Route path="stocks" element={<Stocks />} />
-            <Route path="instruments/:symbol" element={<Instruments />} />
-          </Route>
+          <Route path="/" element={<Stocks />} />
+          <Route path="/instruments/:symbol" element={<Instruments />} />
         </Routes>
       </BrowserRouter>
     </div>

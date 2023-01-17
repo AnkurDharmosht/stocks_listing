@@ -6,12 +6,6 @@ const cache = new LRU({ max: 10 });
 
 let axios;
 export const getAxios = (token = null) => {
-  if (!token) {
-    // console.log("law axios..");
-    // console.log("law setting token..");
-    // console.log("law token=>", token);
-    token = localStorage.getItem("access_token");
-  }
   axios = Axios.create({
     baseURL: BASE_URL,
     timeout: 1500000,
@@ -39,22 +33,4 @@ export const getAxios = (token = null) => {
 getAxios();
 export const useAx = (endpoint) => {
   return useAxios(endpoint);
-};
-export const noAuthGet = (endpoint, setIsProgress, onSuccess, onError) => {
-  if (setIsProgress) setIsProgress(true);
-  axios
-    .get(endpoint, "", {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `null`,
-      },
-    })
-    .then((response) => {
-      const data = response;
-      onSuccess(data);
-      if (setIsProgress) setIsProgress(false);
-    })
-    .catch((error) => {
-      if (setIsProgress) setIsProgress(false);
-    });
 };

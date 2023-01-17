@@ -10,7 +10,7 @@ import InnerHeader from "./components/InnerHeader";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import ApiPaginate from "./components/tables/ApiPaginate";
 import ApiEndpoints from "../networks/ApiEndPoints";
-import { clientTable, customStyles } from "./components/tables/TableStyle";
+import { clientTable } from "./components/tables/TableStyle";
 import { useNavigate } from "react-router";
 import useDebounce from "../util/useDebounce";
 

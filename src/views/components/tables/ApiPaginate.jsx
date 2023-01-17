@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Swal from "sweetalert2";
 import { useAx } from "../../../networks/ApiController";
 import { csvJSON } from "../../../util/csvtojson";
 import PaginateTable from "./PaginateTable";
@@ -75,7 +74,7 @@ const ApiPaginate = ({
     }
     if (error) {
       if (error.message && error.message === "Network Error") {
-        Swal.fire("Check your Network Connection!!!");
+        console.log("error=>", error);
       } else {
         console.log(error);
       }
@@ -165,7 +164,6 @@ const ApiPaginate = ({
         clearSelection={clearSelection}
         conditionalRowStyles={conditionalRowStyles}
         onRowClicked={onRowClicked}
-        // selectableRowDisabled={selectableRowDisabled}
       />
     </div>
   );
